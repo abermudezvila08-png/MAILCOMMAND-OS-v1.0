@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MailCommand OS</title>
+
+<style>
+:root{
+  --bg:#070707;
+  --panel:#111;
+  --accent:#ff7a00;
+  --gold:#d4af37;
+  --text:#f5f5f5;
+  --muted:#999;
+}
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  padding:20px;
+  text-align:center;
+  border-bottom:1px solid #222;
+}
+
+header h1{
+  color:var(--gold);
+  margin:0;
+}
+
+header p{
+  color:var(--muted);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  padding:15px;
+}
+
+/* CARDS */
+.card{
+  background:var(--panel);
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #222;
+}
+
+.card h3{
+  color:var(--accent);
+  margin-top:0;
+}
+
+/* METRICS */
+.metric{
+  font-size:24px;
+  color:var(--gold);
+}
+
+/* LIST */
+.list{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* BUTTONS */
+button{
+  background:var(--accent);
+  color:#000;
+  border:none;
+  padding:10px;
+  width:100%;
+  border-radius:8px;
+  margin-top:10px;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:10px;
+  font-size:12px;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MAILCOMMAND OS</h1>
+  <p>Executive AI Control Center</p>
+</header>
+
+<div class="grid">
+
+  <!-- CORREOS -->
+  <div class="card">
+    <h3>📧 Correos Totales</h3>
+    <div class="metric" id="emails">3,421</div>
+    <div class="list">Pendientes: 12 | Responder: 5</div>
+    <button onclick="simulate('emails')">Analizar Bandeja</button>
+  </div>
+
+  <!-- TAREAS -->
+  <div class="card">
+    <h3>📋 Tareas Activas</h3>
+    <div class="metric" id="tasks">18</div>
+    <div class="list">Urgentes: 3 | Vencen hoy: 2</div>
+    <button onclick="simulate('tasks')">Generar tareas IA</button>
+  </div>
+
+  <!-- FACTURAS -->
+  <div class="card">
+    <h3>💰 Facturas</h3>
+    <div class="metric" id="invoices">9</div>
+    <div class="list">Pendientes pago: 2</div>
+    <button onclick="simulate('invoices')">Detectar facturas</button>
+  </div>
+
+  <!-- RIESGOS -->
+  <div class="card">
+    <h3>🚨 Riesgos</h3>
+    <div class="metric" id="risks">1</div>
+    <div class="list">Phishing detectado</div>
+    <button onclick="simulate('risks')">Escanear seguridad</button>
+  </div>
+
+  <!-- SUSCRIPCIONES -->
+  <div class="card">
+    <h3>🗑 Suscripciones</h3>
+    <div class="metric" id="subs">47</div>
+    <div class="list">Inactivas: 32</div>
+    <button onclick="simulate('subs')">Optimizar limpieza</button>
+  </div>
+
+  <!-- MEMORIA -->
+  <div class="card">
+    <h3>🧠 Memoria AI</h3>
+    <div class="metric">ACTIVA</div>
+    <div class="list">Seguimientos + contexto guardado</div>
+    <button onclick="simulate('memory')">Consultar memoria</button>
+  </div>
+
+</div>
+
+<footer>
+  MailCommand OS v1.0 — AI Executive System
+</footer>
+
+<script>
+function simulate(type){
+  if(type==='emails'){
+    alert("Analizando correos... detectados 5 urgentes y 2 facturas.");
+  }
+  if(type==='tasks'){
+    alert("IA generó 4 nuevas tareas desde correos recientes.");
+  }
+  if(type==='invoices'){
+    alert("3 nuevas facturas detectadas automáticamente.");
+  }
+  if(type==='risks'){
+    alert("Se detectó 1 intento de phishing sospechoso.");
+  }
+  if(type==='subs'){
+    alert("32 suscripciones pueden ser eliminadas sin impacto.");
+  }
+  if(type==='memory'){
+    alert("Memoria activa: 14 compromisos en seguimiento.");
+  }
+}
+</script>
+
+</body>
+</html>
